@@ -58,17 +58,17 @@ class Area
      *
      * @throws RuntimeException
      */
-    public static function ellipse(Length $radius1, Length $radius2): Length
+    public static function ellipse(Length $majorAxisRadius, Length $minorAxisRadius): Length
     {
-        if ($radius1->getMeter() < 0.0) {
-            throw new RuntimeException('Radius1 cannot be less than zero');
+        if ($majorAxisRadius->getMeter() < 0.0) {
+            throw new RuntimeException('Major Axis Radius cannot be less than zero');
         }
 
-        if ($radius2->getMeter() < 0.0) {
-            throw new RuntimeException('Radius2 cannot be less than zero');
+        if ($minorAxisRadius->getMeter() < 0.0) {
+            throw new RuntimeException('Minor Axis Radius cannot be less than zero');
         }
 
-        return new Length(meter: M_PI * $radius1->getMeter() * $radius2->getMeter());
+        return new Length(meter: M_PI * $majorAxisRadius->getMeter() * $minorAxisRadius->getMeter());
     }
 
     /**

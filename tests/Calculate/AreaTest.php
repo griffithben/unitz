@@ -126,7 +126,7 @@ final class AreaTest extends TestCase
     public function testEllipseThrowsRuntimeExceptionWithNegativeRadius1(): void
     {
         $this->expectException(\RuntimeException::class);
-        $this->expectExceptionMessage('Radius1 cannot be less than zero');
+        $this->expectExceptionMessage('Major Axis Radius cannot be less than zero');
 
         $radius1 = new Length(meter: -5);
         $radius2 = new Length(meter: 10);
@@ -145,7 +145,7 @@ final class AreaTest extends TestCase
     public function testEllipseThrowsRuntimeExceptionWithNegativeRadius2(): void
     {
         $this->expectException(\RuntimeException::class);
-        $this->expectExceptionMessage('Radius2 cannot be less than zero');
+        $this->expectExceptionMessage('Minor Axis Radius cannot be less than zero');
 
         $radius1 = new Length(meter: 5);
         $radius2 = new Length(meter: -10);
