@@ -199,6 +199,250 @@ ___
 
 A library of calculations that can be used with various Unitz classes.
 
+### Area
+
+This class will calculate Area related calculations.
+___
+
+#### Rectangle
+
+This method will calculate the area of a rectangle based on the length and width.
+
+```php  
+Area::rectangle(Length $length, Length $width): Length
+```
+
+##### Arguments
+
+- `Length $length` - Length of the rectangle
+- `Length $width` - Width of the rectangle
+
+##### Returns
+
+- `Length` - Area of the rectangle
+
+---
+
+#### Square
+
+This method will calculate the area of a square based on the length of one side.
+
+```php
+Area::square(Length $side): Length
+```
+
+##### Arguments
+
+- `Length $side` - Length of one side of the square
+
+##### Returns
+
+- `Length` - Area of the square
+
+---
+
+#### Circle
+
+This method will calculate the area of a circle based on the radius.
+
+```php
+Area::circle(Length $radius): Length
+```
+
+##### Arguments
+
+- `Length $radius` - Radius of the circle
+
+##### Returns
+
+- `Length` - Area of the circle
+
+---
+
+#### Ellipse
+
+This method will calculate the area of an ellipse based on the major and minor axis.
+
+```php
+Area::ellipse(Length $majorAxisRadius, Length $minorAxisRadius): Length
+```
+
+##### Arguments
+
+- `Length $majorAxisRadius` - Major axis radius of the ellipse
+- `Length $minorAxisRadius` - Minor axis radius of the ellipse
+
+##### Returns
+
+- `Length` - Area of the ellipse
+
+---
+
+#### Triangle
+
+This method will calculate the area of a triangle based on the base and height.
+
+```php
+Area::triangle(Length $base, Length $height): Length
+```
+
+##### Arguments
+
+- `Length $base` - Base of the triangle
+- `Length $height` - Height of the triangle
+
+##### Returns
+
+- `Length` - Area of the triangle
+
+---
+
+#### Equilateral Triangle
+
+This method will calculate the area of an equilateral triangle based on the length of one side.
+
+```php
+Area::equilateralTriangle(Length $side): Length
+```
+
+##### Arguments
+
+- `Length $side` - Length of one side of the equilateral triangle
+
+##### Returns
+
+- `Length` - Area of the equilateral triangle
+
+---
+
+#### Trapezoid
+
+This method will calculate the area of a trapezoid based on the length of the two bases and the height.
+
+```php
+Area::trapezoid(Length $base1, Length $base2, Length $height): Length
+```
+
+##### Arguments
+
+- `Length $base1` - Length of the first base of the trapezoid
+- `Length $base2` - Length of the second base of the trapezoid
+- `Length $height` - Height of the trapezoid
+
+##### Returns
+
+- `Length` - Area of the trapezoid
+
+---
+
+#### Regular Pentagon
+
+This method will calculate the area of a regular pentagon based on the length of one side.
+
+```php
+Area::regularPentagon(Length $side): Length
+```
+
+##### Arguments
+
+- `Length $side` - Length of one side of the regular pentagon
+
+##### Returns
+
+- `Length` - Area of the regular pentagon
+
+--- 
+
+#### Regular Hexagon
+
+This method will calculate the area of a regular hexagon based on the length of one side.
+
+```php
+Area::regularHexagon(Length $side): Length
+```
+
+##### Arguments
+
+- `Length $side` - Length of one side of the regular hexagon
+
+##### Returns
+
+- `Length` - Area of the regular hexagon
+
+---
+
+#### Regular Heptagon
+
+This method will calculate the area of a regular heptagon based on the length of one side.
+
+```php
+Area::regularHeptagon(Length $side): Length
+```
+
+##### Arguments
+
+- `Length $side` - Length of one side of the regular heptagon
+
+##### Returns
+
+- `Length` - Area of the regular heptagon
+
+---
+
+#### Regular Octagon
+
+This method will calculate the area of a regular octagon based on the length of one side.
+
+```php
+Area::regularOctagon(Length $side): Length
+```
+
+##### Arguments
+
+- `Length $side` - Length of one side of the regular octagon
+
+##### Returns
+
+- `Length` - Area of the regular octagon
+
+---
+
+#### Regular Nonagon
+
+This method will calculate the area of a regular nonagon based on the length of one side.
+
+```php
+Area::regularNonagon(Length $side): Length
+```
+
+##### Arguments
+
+- `Length $side` - Length of one side of the regular nonagon
+
+##### Returns
+
+- `Length` - Area of the regular nonagon
+
+---
+
+#### Regular Decagon
+
+This method will calculate the area of a regular decagon based on the length of one side.
+
+```php
+Area::regularDecagon(Length $side): Length
+```
+
+##### Arguments
+
+- `Length $side` - Length of one side of the regular decagon
+
+##### Returns
+
+- `Length` - Area of the regular decagon
+
+---
+
 ### Beer
 
 This class will calculate Beer related calculations.
