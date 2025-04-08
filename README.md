@@ -1,6 +1,6 @@
 # Unitz
 
-![example workflow](https://github.com/brewerwall/unitz/actions/workflows/main.yml/badge.svg)
+![example workflow](https://github.com/griffithben/unitz/actions/workflows/main.yml/badge.svg)
 
 ## Introduction
 
@@ -10,7 +10,7 @@ that helps convert a unit to all types and agnostic to what type of unit it was 
 ### Installation
 
 ```bash
-composer require brewerwall/unitz
+composer require griffithben/unitz
 ```
 
 ### Single Type Use
