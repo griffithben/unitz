@@ -1,5 +1,5 @@
 {
-  "name": "brewerwall/unitz",
+  "name": "griffithben/unitz",
   "description": "A unit storage model to manage values between units",
   "license": "MIT",
   "autoload": {
@@ -11,7 +11,7 @@
   "authors": [
     {
       "name": "Ben Griffith",
-      "email": "ben@brewerwall.com",
+      "email": "griffith.ben@gmail.com",
       "role": "lead"
     }
   ],
