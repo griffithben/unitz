@@ -94,17 +94,21 @@ $temperature->getFahrenheit(); // 76
 
 ### Available Units
 
-| Unit        | Types                                                            |
-|-------------|------------------------------------------------------------------|
-| Gravity     | Plato, SpecificGravity, Brix                                     |
-| Pressure    | Psi, Bar                                                         |
-| Temperature | Celsius, Fahrenheit                                              |
-| Volume      | Ounce, Gallon, Barrel, Milliliter, Liter, Hectoliter             |
-| Weight      | Ounce, Pound, Gram, Kilogram                                     |
-| Color       | Srm, Ebc, Lovibond                                               |
-| Time        | Millisecond, Second, Minute, Hour, Day, Week, Month, Year        |
-| Distillate  | Proof, Alcohol Percent                                           |
-| Length      | Inch, Foot, Yard, Mile, Millimeter, Centimeter, Meter, Kilometer |
+| Unit           | Types                                                                |
+|----------------|----------------------------------------------------------------------|
+| Gravity        | Plato, SpecificGravity, Brix                                         |
+| Pressure       | Psi, Bar                                                             |
+| Temperature    | Celsius, Fahrenheit                                                  |
+| Volume         | Ounce, Gallon, Barrel, Milliliter, Liter, Hectoliter                 |
+| Weight         | Ounce, Pound, Gram, Kilogram                                         |
+| Color          | Srm, Ebc, Lovibond                                                   |
+| Time           | Millisecond, Second, Minute, Hour, Day, Week, Month, Year            |
+| Distillate     | Proof, Alcohol Percent                                               |
+| Length         | Inch, Foot, Yard, Mile, Millimeter, Centimeter, Meter, Kilometer     |
+| Energy         | Joule, Kilojoule, Calorie, Kilocalorie, Btu, WattHour, KilowattHour |
+| Angle          | Degree, Radian, Gradian, ArcMinute, ArcSecond                        |
+| DigitalStorage | Bit, Byte, Kilobyte, Megabyte, Gigabyte, Terabyte                    |
+| Frequency      | Hertz, Kilohertz, Megahertz, Gigahertz                               |
 
 ### Preferences
 

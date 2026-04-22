@@ -17,6 +17,7 @@ class BaseUnitz
         'Energy' => 'Joule',
         'Angle' => 'Degree',
         'DigitalStorage' => 'Megabyte',
+        'Frequency' => 'Hertz',
     ];
 
     private array $preferences;

@@ -148,6 +148,24 @@ final class UnitzService extends BaseUnitz
     }
 
     /**
+     * @param float|null $hertz
+     * @param float|null $kilohertz
+     * @param float|null $megahertz
+     * @param float|null $gigahertz
+     * @param float|null $userValue
+     * @return \Unitz\Frequency
+     */
+    public function makeFrequency(
+        ?float $hertz = null,
+        ?float $kilohertz = null,
+        ?float $megahertz = null,
+        ?float $gigahertz = null,
+        ?float $userValue = null
+    ): Frequency {
+        return new Frequency($hertz, $kilohertz, $megahertz, $gigahertz, $userValue, $this->getPreferences());
+    }
+
+    /**
      * @param float|null $bit
      * @param float|null $byte
      * @param float|null $kilobyte
