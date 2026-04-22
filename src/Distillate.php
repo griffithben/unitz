@@ -34,11 +34,6 @@ class Distillate extends AbstractUnitz
         }
     }
 
-    /**
-     * @param float $proof
-     * @return $this
-     * @throws \InvalidArgumentException
-     */
     public function setProof(float $proof): self
     {
         if ($proof > 200) {
@@ -51,20 +46,11 @@ class Distillate extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param ?int $round
-     * @return float
-     */
     public function getProof(?int $round = null): float
     {
         return $round ? round($this->proof, $round) : $this->proof;
     }
 
-    /**
-     * @param float $percentAlcohol
-     * @return $this
-     * @throws \InvalidArgumentException
-     */
     public function setPercentAlcohol(float $percentAlcohol): self
     {
         if ($percentAlcohol > 100) {
@@ -77,28 +63,16 @@ class Distillate extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param ?int $round
-     * @return float
-     */
     public function getPercentAlcohol(?int $round = null): float
     {
         return $round ? round($this->percentAlcohol, $round) : $this->percentAlcohol;
     }
 
-    /**
-     * @param float $proof
-     * @return float
-     */
     public static function convertProofToPercentAlcohol(float $proof): float
     {
         return $proof / 2;
     }
 
-    /**
-     * @param float $percentAlcohol
-     * @return float
-     */
     public static function convertPercentAlcoholToProof(float $percentAlcohol): float
     {
         return $percentAlcohol * 2;

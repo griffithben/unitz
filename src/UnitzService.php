@@ -4,13 +4,6 @@ namespace Unitz;
 
 final class UnitzService extends BaseUnitz
 {
-    /**
-     * @param float|null $srm
-     * @param float|null $ebc
-     * @param float|null $lovibond
-     * @param float|null $userValue
-     * @return \Unitz\Color
-     */
     public function makeColor(
         ?float $srm = null,
         ?float $ebc = null,
@@ -20,13 +13,6 @@ final class UnitzService extends BaseUnitz
         return new Color($srm, $ebc, $lovibond, $userValue, $this->getPreferences());
     }
 
-    /**
-     * @param float|null $plato
-     * @param float|null $specificGravity
-     * @param float|null $brix
-     * @param float|null $userValue
-     * @return \Unitz\Gravity
-     */
     public function makeGravity(
         ?float $plato = null,
         ?float $specificGravity = null,
@@ -36,23 +22,11 @@ final class UnitzService extends BaseUnitz
         return new Gravity($plato, $specificGravity, $brix, $userValue, $this->getPreferences());
     }
 
-    /**
-     * @param float|null $bar
-     * @param float|null $psi
-     * @param float|null $userValue
-     * @return \Unitz\Pressure
-     */
     public function makePressure(?float $bar = null, ?float $psi = null, ?float $userValue = null): Pressure
     {
         return new Pressure($bar, $psi, $userValue, $this->getPreferences());
     }
 
-    /**
-     * @param float|null $fahrenheit
-     * @param float|null $celsius
-     * @param float|null $userValue
-     * @return \Unitz\Temperature
-     */
     public function makeTemperature(
         ?float $fahrenheit = null,
         ?float $celsius = null,
@@ -61,16 +35,6 @@ final class UnitzService extends BaseUnitz
         return new Temperature($fahrenheit, $celsius, $userValue, $this->getPreferences());
     }
 
-    /**
-     * @param float|null $ounce
-     * @param float|null $gallon
-     * @param float|null $barrel
-     * @param float|null $milliliter
-     * @param float|null $liter
-     * @param float|null $hectoliter
-     * @param float|null $userValue
-     * @return \Unitz\Volume
-     */
     public function makeVolume(
         ?float $ounce = null,
         ?float $gallon = null,
@@ -92,14 +56,6 @@ final class UnitzService extends BaseUnitz
         );
     }
 
-    /**
-     * @param float|null $ounce
-     * @param float|null $pound
-     * @param float|null $gram
-     * @param float|null $kilogram
-     * @param float|null $userValue
-     * @return \Unitz\Weight
-     */
     public function makeWeight(
         ?float $ounce = null,
         ?float $pound = null,
@@ -110,18 +66,6 @@ final class UnitzService extends BaseUnitz
         return new Weight($ounce, $pound, $gram, $kilogram, $userValue, $this->getPreferences());
     }
 
-    /**
-     * @param float|null $millisecond
-     * @param float|null $second
-     * @param float|null $minute
-     * @param float|null $hour
-     * @param float|null $day
-     * @param float|null $week
-     * @param float|null $month
-     * @param float|null $year
-     * @param float|null $userValue
-     * @return \Unitz\Time
-     */
     public function makeTime(
         ?float $millisecond = null,
         ?float $second = null,
@@ -147,14 +91,6 @@ final class UnitzService extends BaseUnitz
         );
     }
 
-    /**
-     * @param float|null $hertz
-     * @param float|null $kilohertz
-     * @param float|null $megahertz
-     * @param float|null $gigahertz
-     * @param float|null $userValue
-     * @return \Unitz\Frequency
-     */
     public function makeFrequency(
         ?float $hertz = null,
         ?float $kilohertz = null,
@@ -165,16 +101,6 @@ final class UnitzService extends BaseUnitz
         return new Frequency($hertz, $kilohertz, $megahertz, $gigahertz, $userValue, $this->getPreferences());
     }
 
-    /**
-     * @param float|null $bit
-     * @param float|null $byte
-     * @param float|null $kilobyte
-     * @param float|null $megabyte
-     * @param float|null $gigabyte
-     * @param float|null $terabyte
-     * @param float|null $userValue
-     * @return \Unitz\DigitalStorage
-     */
     public function makeDigitalStorage(
         ?float $bit = null,
         ?float $byte = null,
@@ -196,15 +122,6 @@ final class UnitzService extends BaseUnitz
         );
     }
 
-    /**
-     * @param float|null $degree
-     * @param float|null $radian
-     * @param float|null $gradian
-     * @param float|null $arcMinute
-     * @param float|null $arcSecond
-     * @param float|null $userValue
-     * @return \Unitz\Angle
-     */
     public function makeAngle(
         ?float $degree = null,
         ?float $radian = null,
@@ -216,17 +133,6 @@ final class UnitzService extends BaseUnitz
         return new Angle($degree, $radian, $gradian, $arcMinute, $arcSecond, $userValue, $this->getPreferences());
     }
 
-    /**
-     * @param float|null $joule
-     * @param float|null $kilojoule
-     * @param float|null $calorie
-     * @param float|null $kilocalorie
-     * @param float|null $btu
-     * @param float|null $wattHour
-     * @param float|null $kilowattHour
-     * @param float|null $userValue
-     * @return \Unitz\Energy
-     */
     public function makeEnergy(
         ?float $joule = null,
         ?float $kilojoule = null,
@@ -250,12 +156,6 @@ final class UnitzService extends BaseUnitz
         );
     }
 
-    /**
-     * @param float|null $proof
-     * @param float|null $percentAlcohol
-     * @param float|null $userValue
-     * @return \Unitz\Distillate
-     */
     public function makeDistillate(
         ?float $proof = null,
         ?float $percentAlcohol = null,

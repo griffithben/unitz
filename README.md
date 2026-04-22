@@ -128,6 +128,10 @@ preference set, but can be overridden when instantiating a new unit.
     'Time' => 'Minute',
     'Distillate' => 'Proof',
     'Length' => 'Foot',
+    'Energy' => 'Joule',
+    'Angle' => 'Degree',
+    'DigitalStorage' => 'Megabyte',
+    'Frequency' => 'Hertz',
 ];
 ```
 

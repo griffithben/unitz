@@ -7,11 +7,6 @@ use RuntimeException;
 
 abstract class AbstractUnitz extends BaseUnitz
 {
-    /**
-     * @param int|null $round
-     * @return float
-     * @throws \RuntimeException
-     */
     public function getValue(?int $round = null): float
     {
         $getterMethod = $this->makeGetterMethod();
@@ -23,11 +18,6 @@ abstract class AbstractUnitz extends BaseUnitz
         throw new RuntimeException("Unit '$getterMethod' does not exist.");
     }
 
-    /**
-     * @param float $value
-     * @return self
-     * @throws \RuntimeException
-     */
     public function setValue(float $value): self
     {
         $setterMethod = $this->makeSetterMethod();
@@ -39,10 +29,6 @@ abstract class AbstractUnitz extends BaseUnitz
         throw new RuntimeException("Unit '$setterMethod' does not exist.");
     }
 
-    /**
-     * @param array $values
-     * @return bool
-     */
     protected function hasOneOrNoneValue(array $values): bool
     {
         $count = 0;
@@ -55,29 +41,16 @@ abstract class AbstractUnitz extends BaseUnitz
         return $count <= 1;
     }
 
-    /**
-     * @return string
-     * @throws \RuntimeException
-     */
     private function makeGetterMethod(): string
     {
         return $this->makeMethod('get');
     }
 
-    /**
-     * @return string
-     * @throws \RuntimeException
-     */
     private function makeSetterMethod(): string
     {
         return $this->makeMethod('set');
     }
 
-    /**
-     * @param string $prefix
-     * @return string
-     * @throws \RuntimeException
-     */
     private function makeMethod(string $prefix): string
     {
         $reflection = new ReflectionClass($this);
