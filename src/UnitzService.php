@@ -148,6 +148,60 @@ final class UnitzService extends BaseUnitz
     }
 
     /**
+     * @param float|null $degree
+     * @param float|null $radian
+     * @param float|null $gradian
+     * @param float|null $arcMinute
+     * @param float|null $arcSecond
+     * @param float|null $userValue
+     * @return \Unitz\Angle
+     */
+    public function makeAngle(
+        ?float $degree = null,
+        ?float $radian = null,
+        ?float $gradian = null,
+        ?float $arcMinute = null,
+        ?float $arcSecond = null,
+        ?float $userValue = null
+    ): Angle {
+        return new Angle($degree, $radian, $gradian, $arcMinute, $arcSecond, $userValue, $this->getPreferences());
+    }
+
+    /**
+     * @param float|null $joule
+     * @param float|null $kilojoule
+     * @param float|null $calorie
+     * @param float|null $kilocalorie
+     * @param float|null $btu
+     * @param float|null $wattHour
+     * @param float|null $kilowattHour
+     * @param float|null $userValue
+     * @return \Unitz\Energy
+     */
+    public function makeEnergy(
+        ?float $joule = null,
+        ?float $kilojoule = null,
+        ?float $calorie = null,
+        ?float $kilocalorie = null,
+        ?float $btu = null,
+        ?float $wattHour = null,
+        ?float $kilowattHour = null,
+        ?float $userValue = null
+    ): Energy {
+        return new Energy(
+            $joule,
+            $kilojoule,
+            $calorie,
+            $kilocalorie,
+            $btu,
+            $wattHour,
+            $kilowattHour,
+            $userValue,
+            $this->getPreferences()
+        );
+    }
+
+    /**
      * @param float|null $proof
      * @param float|null $percentAlcohol
      * @param float|null $userValue
