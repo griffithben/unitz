@@ -22,30 +22,16 @@ abstract class AbstractRate
         $this->inflector = InflectorFactory::create()->build();
     }
 
-    /**
-     * @param \Unitz\BaseUnitz $numerator
-     * @return void
-     */
     protected function setNumerator(BaseUnitz $numerator): void
     {
         $this->numerator = $numerator;
     }
 
-    /**
-     * @param \Unitz\BaseUnitz $denominator
-     * @return void
-     */
     protected function setDenominator(BaseUnitz $denominator): void
     {
         $this->denominator = $denominator;
     }
 
-    /**
-     * @param string $methodName
-     * @param array $arguments
-     * @return \Unitz\BaseUnitz
-     * @throws \RuntimeException
-     */
     public function __call(string $methodName, array $arguments): BaseUnitz
     {
         $unitNames = $this->getUnitNames($this->checkAndRemoveGetPrefix($methodName));
@@ -65,11 +51,6 @@ abstract class AbstractRate
         );
     }
 
-    /**
-     * @param string $name
-     * @return string
-     * @throws \RuntimeException
-     */
     private function checkAndRemoveGetPrefix(string $name): string
     {
         $getPosition = strpos($name, 'get');
@@ -80,11 +61,6 @@ abstract class AbstractRate
         return str_replace('get', '', $name);
     }
 
-    /**
-     * @param string $name
-     * @return array
-     * @throws \RuntimeException
-     */
     private function getUnitNames(string $name): array
     {
         $perPosition = strpos($name, 'Per');
@@ -104,21 +80,11 @@ abstract class AbstractRate
         return $units;
     }
 
-    /**
-     * @param string $unitName
-     * @return string
-     */
     private function processUnitName(string $unitName): string
     {
         return $this->inflector->singularize(ucfirst(strtolower($unitName)));
     }
 
-    /**
-     * @param \Unitz\BaseUnitz $unit
-     * @param string $unitName
-     * @return float
-     * @throws \RuntimeException
-     */
     private function getUnitValue(BaseUnitz $unit, string $unitName): float
     {
         if (!method_exists($unit, "get$unitName")) {

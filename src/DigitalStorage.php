@@ -58,10 +58,6 @@ class DigitalStorage extends AbstractUnitz
         }
     }
 
-    /**
-     * @param float $bit
-     * @return $this
-     */
     public function setBit(float $bit): self
     {
         $this->bit = $bit;
@@ -74,19 +70,11 @@ class DigitalStorage extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getBit(?int $round = null): float
     {
         return $round ? round($this->bit, $round) : $this->bit;
     }
 
-    /**
-     * @param float $byte
-     * @return $this
-     */
     public function setByte(float $byte): self
     {
         $this->byte = $byte;
@@ -99,19 +87,11 @@ class DigitalStorage extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getByte(?int $round = null): float
     {
         return $round ? round($this->byte, $round) : $this->byte;
     }
 
-    /**
-     * @param float $kilobyte
-     * @return $this
-     */
     public function setKilobyte(float $kilobyte): self
     {
         $this->kilobyte = $kilobyte;
@@ -124,19 +104,11 @@ class DigitalStorage extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getKilobyte(?int $round = null): float
     {
         return $round ? round($this->kilobyte, $round) : $this->kilobyte;
     }
 
-    /**
-     * @param float $megabyte
-     * @return $this
-     */
     public function setMegabyte(float $megabyte): self
     {
         $this->megabyte = $megabyte;
@@ -149,19 +121,11 @@ class DigitalStorage extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getMegabyte(?int $round = null): float
     {
         return $round ? round($this->megabyte, $round) : $this->megabyte;
     }
 
-    /**
-     * @param float $gigabyte
-     * @return $this
-     */
     public function setGigabyte(float $gigabyte): self
     {
         $this->gigabyte = $gigabyte;
@@ -174,19 +138,11 @@ class DigitalStorage extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getGigabyte(?int $round = null): float
     {
         return $round ? round($this->gigabyte, $round) : $this->gigabyte;
     }
 
-    /**
-     * @param float $terabyte
-     * @return $this
-     */
     public function setTerabyte(float $terabyte): self
     {
         $this->terabyte = $terabyte;
@@ -199,100 +155,56 @@ class DigitalStorage extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getTerabyte(?int $round = null): float
     {
         return $round ? round($this->terabyte, $round) : $this->terabyte;
     }
 
-    /**
-     * @param float $bit
-     * @return float
-     */
     public static function convertBitToByte(float $bit): float
     {
         return $bit / 8;
     }
 
-    /**
-     * @param float $byte
-     * @return float
-     */
     public static function convertByteToBit(float $byte): float
     {
         return $byte * 8;
     }
 
-    /**
-     * @param float $byte
-     * @return float
-     */
     public static function convertByteToKilobyte(float $byte): float
     {
         return $byte / 1000;
     }
 
-    /**
-     * @param float $kilobyte
-     * @return float
-     */
     public static function convertKilobyteToByte(float $kilobyte): float
     {
         return $kilobyte * 1000;
     }
 
-    /**
-     * @param float $kilobyte
-     * @return float
-     */
     public static function convertKilobyteToMegabyte(float $kilobyte): float
     {
         return $kilobyte / 1000;
     }
 
-    /**
-     * @param float $megabyte
-     * @return float
-     */
     public static function convertMegabyteToKilobyte(float $megabyte): float
     {
         return $megabyte * 1000;
     }
 
-    /**
-     * @param float $megabyte
-     * @return float
-     */
     public static function convertMegabyteToGigabyte(float $megabyte): float
     {
         return $megabyte / 1000;
     }
 
-    /**
-     * @param float $gigabyte
-     * @return float
-     */
     public static function convertGigabyteToMegabyte(float $gigabyte): float
     {
         return $gigabyte * 1000;
     }
 
-    /**
-     * @param float $gigabyte
-     * @return float
-     */
     public static function convertGigabyteToTerabyte(float $gigabyte): float
     {
         return $gigabyte / 1000;
     }
 
-    /**
-     * @param float $terabyte
-     * @return float
-     */
     public static function convertTerabyteToGigabyte(float $terabyte): float
     {
         return $terabyte * 1000;

@@ -52,10 +52,6 @@ class Angle extends AbstractUnitz
         }
     }
 
-    /**
-     * @param float $degree
-     * @return $this
-     */
     public function setDegree(float $degree): self
     {
         $this->degree = $degree;
@@ -67,19 +63,11 @@ class Angle extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getDegree(?int $round = null): float
     {
         return $round ? round($this->degree, $round) : $this->degree;
     }
 
-    /**
-     * @param float $radian
-     * @return $this
-     */
     public function setRadian(float $radian): self
     {
         $this->radian = $radian;
@@ -89,19 +77,11 @@ class Angle extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getRadian(?int $round = null): float
     {
         return $round ? round($this->radian, $round) : $this->radian;
     }
 
-    /**
-     * @param float $gradian
-     * @return $this
-     */
     public function setGradian(float $gradian): self
     {
         $this->gradian = $gradian;
@@ -111,19 +91,11 @@ class Angle extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getGradian(?int $round = null): float
     {
         return $round ? round($this->gradian, $round) : $this->gradian;
     }
 
-    /**
-     * @param float $arcMinute
-     * @return $this
-     */
     public function setArcMinute(float $arcMinute): self
     {
         $this->arcMinute = $arcMinute;
@@ -133,19 +105,11 @@ class Angle extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getArcMinute(?int $round = null): float
     {
         return $round ? round($this->arcMinute, $round) : $this->arcMinute;
     }
 
-    /**
-     * @param float $arcSecond
-     * @return $this
-     */
     public function setArcSecond(float $arcSecond): self
     {
         $this->arcSecond = $arcSecond;
@@ -155,82 +119,46 @@ class Angle extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getArcSecond(?int $round = null): float
     {
         return $round ? round($this->arcSecond, $round) : $this->arcSecond;
     }
 
-    /**
-     * @param float $degree
-     * @return float
-     */
     public static function convertDegreeToRadian(float $degree): float
     {
         return $degree * M_PI / 180;
     }
 
-    /**
-     * @param float $radian
-     * @return float
-     */
     public static function convertRadianToDegree(float $radian): float
     {
         return $radian * 180 / M_PI;
     }
 
-    /**
-     * @param float $degree
-     * @return float
-     */
     public static function convertDegreeToGradian(float $degree): float
     {
         return $degree * 400 / 360;
     }
 
-    /**
-     * @param float $gradian
-     * @return float
-     */
     public static function convertGradianToDegree(float $gradian): float
     {
         return $gradian * 360 / 400;
     }
 
-    /**
-     * @param float $degree
-     * @return float
-     */
     public static function convertDegreeToArcMinute(float $degree): float
     {
         return $degree * 60;
     }
 
-    /**
-     * @param float $arcMinute
-     * @return float
-     */
     public static function convertArcMinuteToDegree(float $arcMinute): float
     {
         return $arcMinute / 60;
     }
 
-    /**
-     * @param float $degree
-     * @return float
-     */
     public static function convertDegreeToArcSecond(float $degree): float
     {
         return $degree * 3600;
     }
 
-    /**
-     * @param float $arcSecond
-     * @return float
-     */
     public static function convertArcSecondToDegree(float $arcSecond): float
     {
         return $arcSecond / 3600;

@@ -72,10 +72,6 @@ class Time extends AbstractUnitz
         }
     }
 
-    /**
-     * @param float $millisecond
-     * @return $this
-     */
     public function setMillisecond(float $millisecond): self
     {
         $this->millisecond = $millisecond;
@@ -90,19 +86,11 @@ class Time extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getMillisecond(?int $round = null): float
     {
         return $round ? round($this->millisecond, $round) : $this->millisecond;
     }
 
-    /**
-     * @param float $second
-     * @return $this
-     */
     public function setSecond(float $second): self
     {
         $this->millisecond = self::convertSecondToMillisecond($second);
@@ -117,19 +105,11 @@ class Time extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getSecond(?int $round = null): float
     {
         return $round ? round($this->second, $round) : $this->second;
     }
 
-    /**
-     * @param float $minute
-     * @return $this
-     */
     public function setMinute(float $minute): self
     {
         $this->minute = $minute;
@@ -144,19 +124,11 @@ class Time extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getMinute(?int $round = null): float
     {
         return $round ? round($this->minute, $round) : $this->minute;
     }
 
-    /**
-     * @param float $hour
-     * @return $this\
-     */
     public function setHour(float $hour): self
     {
         $this->hour = $hour;
@@ -171,19 +143,11 @@ class Time extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getHour(?int $round = null): float
     {
         return $round ? round($this->hour, $round) : $this->hour;
     }
 
-    /**
-     * @param float $day
-     * @return $this
-     */
     public function setDay(float $day): self
     {
         $this->day = $day;
@@ -198,19 +162,11 @@ class Time extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getDay(?int $round = null): float
     {
         return $round ? round($this->day, $round) : $this->day;
     }
 
-    /**
-     * @param float $week
-     * @return $this
-     */
     public function setWeek(float $week): self
     {
         $this->week = $week;
@@ -225,19 +181,11 @@ class Time extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getWeek(?int $round = null): float
     {
         return $round ? round($this->week, $round) : $this->week;
     }
 
-    /**
-     * @param float $month
-     * @return $this
-     */
     public function setMonth(float $month): self
     {
         $this->month = $month;
@@ -252,19 +200,11 @@ class Time extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getMonth(?int $round = null): float
     {
         return $round ? round($this->month, $round) : $this->month;
     }
 
-    /**
-     * @param float $year
-     * @return $this
-     */
     public function setYear(float $year): self
     {
         $this->year = $year;
@@ -279,136 +219,76 @@ class Time extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getYear(?int $round = null): float
     {
         return $round ? round($this->year, $round) : $this->year;
     }
 
-    /**
-     * @param float $millisecond
-     * @return float
-     */
     public static function convertMillisecondToSecond(float $millisecond): float
     {
         return $millisecond / 1000;
     }
 
-    /**
-     * @param float $second
-     * @return float
-     */
     public static function convertSecondToMillisecond(float $second): float
     {
         return $second * 1000;
     }
 
-    /**
-     * @param float $second
-     * @return float
-     */
     public static function convertSecondToMinute(float $second): float
     {
         return $second / 60;
     }
 
-    /**
-     * @param float $minute
-     * @return float
-     */
     public static function convertMinuteToSecond(float $minute): float
     {
         return $minute * 60;
     }
 
-    /**
-     * @param float $minute
-     * @return float
-     */
     public static function convertMinuteToHour(float $minute): float
     {
         return $minute / 60;
     }
 
-    /**
-     * @param float $hour
-     * @return float
-     */
     public static function convertHourToMinute(float $hour): float
     {
         return $hour * 60;
     }
 
-    /**
-     * @param float $hour
-     * @return float
-     */
     public static function convertHourToDay(float $hour): float
     {
         return $hour / 24;
     }
 
-    /**
-     * @param float $day
-     * @return float
-     */
     public static function convertDayToHour(float $day): float
     {
         return $day * 24;
     }
 
-    /**
-     * @param float $day
-     * @return float
-     */
     public static function convertDayToWeek(float $day): float
     {
         return $day / 7;
     }
 
-    /**
-     * @param float $week
-     * @return float
-     */
     public static function convertWeekToDay(float $week): float
     {
         return $week * 7;
     }
 
-    /**
-     * @param float $day
-     * @return float
-     */
     public static function convertDayToMonth(float $day): float
     {
         return $day / 30;
     }
 
-    /**
-     * @param float $month
-     * @return float
-     */
     public static function convertMonthToDay(float $month): float
     {
         return $month * 30;
     }
 
-    /**
-     * @param float $day
-     * @return float
-     */
     public static function convertDayToYear(float $day): float
     {
         return $day / 365;
     }
 
-    /**
-     * @param float $year
-     * @return float
-     */
     public static function convertYearToDay(float $year): float
     {
         return $year * 365;

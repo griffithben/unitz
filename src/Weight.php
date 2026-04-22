@@ -46,10 +46,6 @@ class Weight extends AbstractUnitz
         }
     }
 
-    /**
-     * @param float $ounce
-     * @return $this
-     */
     public function setOunce(float $ounce): self
     {
         $this->ounce = $ounce;
@@ -60,19 +56,11 @@ class Weight extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getOunce(?int $round = null): float
     {
         return $round ? round($this->ounce, $round) : $this->ounce;
     }
 
-    /**
-     * @param float $pound
-     * @return $this
-     */
     public function setPound(float $pound): self
     {
         $this->ounce = self::convertPoundToOunce($pound);
@@ -83,19 +71,11 @@ class Weight extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getPound(?int $round = null): float
     {
         return $round ? round($this->pound, $round) : $this->pound;
     }
 
-    /**
-     * @param float $gram
-     * @return $this
-     */
     public function setGram(float $gram): self
     {
         $this->gram = $gram;
@@ -106,19 +86,11 @@ class Weight extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getGram(?int $round = null): float
     {
         return $round ? round($this->gram, $round) : $this->gram;
     }
 
-    /**
-     * @param float $kilogram
-     * @return $this
-     */
     public function setKilogram(float $kilogram): self
     {
         $this->gram = self::convertKilogramToGram($kilogram);
@@ -129,64 +101,36 @@ class Weight extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getKilogram(?int $round = null): float
     {
         return $round ? round($this->kilogram, $round) : $this->kilogram;
     }
 
-    /**
-     * @param float $pound
-     * @return float
-     */
     public static function convertPoundToOunce(float $pound): float
     {
         return $pound * 16;
     }
 
-    /**
-     * @param float $ounce
-     * @return float
-     */
     public static function convertOunceToPound(float $ounce): float
     {
         return $ounce / 16;
     }
 
-    /**
-     * @param float $pound
-     * @return float
-     */
     public static function convertPoundToKilogram(float $pound): float
     {
         return $pound * 0.45359237;
     }
 
-    /**
-     * @param float $kilogram
-     * @return float
-     */
     public static function convertKilogramToPound(float $kilogram): float
     {
         return $kilogram / 0.45359237;
     }
 
-    /**
-     * @param float $kilogram
-     * @return float
-     */
     public static function convertKilogramToGram(float $kilogram): float
     {
         return $kilogram * 1000;
     }
 
-    /**
-     * @param float $gram
-     * @return float
-     */
     public static function convertGramToKilogram(float $gram): float
     {
         return $gram / 1000;

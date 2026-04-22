@@ -46,10 +46,6 @@ class Frequency extends AbstractUnitz
         }
     }
 
-    /**
-     * @param float $hertz
-     * @return $this
-     */
     public function setHertz(float $hertz): self
     {
         $this->hertz = $hertz;
@@ -60,19 +56,11 @@ class Frequency extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getHertz(?int $round = null): float
     {
         return $round ? round($this->hertz, $round) : $this->hertz;
     }
 
-    /**
-     * @param float $kilohertz
-     * @return $this
-     */
     public function setKilohertz(float $kilohertz): self
     {
         $this->kilohertz = $kilohertz;
@@ -83,19 +71,11 @@ class Frequency extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getKilohertz(?int $round = null): float
     {
         return $round ? round($this->kilohertz, $round) : $this->kilohertz;
     }
 
-    /**
-     * @param float $megahertz
-     * @return $this
-     */
     public function setMegahertz(float $megahertz): self
     {
         $this->megahertz = $megahertz;
@@ -106,19 +86,11 @@ class Frequency extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getMegahertz(?int $round = null): float
     {
         return $round ? round($this->megahertz, $round) : $this->megahertz;
     }
 
-    /**
-     * @param float $gigahertz
-     * @return $this
-     */
     public function setGigahertz(float $gigahertz): self
     {
         $this->gigahertz = $gigahertz;
@@ -129,64 +101,36 @@ class Frequency extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getGigahertz(?int $round = null): float
     {
         return $round ? round($this->gigahertz, $round) : $this->gigahertz;
     }
 
-    /**
-     * @param float $hertz
-     * @return float
-     */
     public static function convertHertzToKilohertz(float $hertz): float
     {
         return $hertz / 1000;
     }
 
-    /**
-     * @param float $kilohertz
-     * @return float
-     */
     public static function convertKilohertzToHertz(float $kilohertz): float
     {
         return $kilohertz * 1000;
     }
 
-    /**
-     * @param float $kilohertz
-     * @return float
-     */
     public static function convertKilohertzToMegahertz(float $kilohertz): float
     {
         return $kilohertz / 1000;
     }
 
-    /**
-     * @param float $megahertz
-     * @return float
-     */
     public static function convertMegahertzToKilohertz(float $megahertz): float
     {
         return $megahertz * 1000;
     }
 
-    /**
-     * @param float $megahertz
-     * @return float
-     */
     public static function convertMegahertzToGigahertz(float $megahertz): float
     {
         return $megahertz / 1000;
     }
 
-    /**
-     * @param float $gigahertz
-     * @return float
-     */
     public static function convertGigahertzToMegahertz(float $gigahertz): float
     {
         return $gigahertz * 1000;

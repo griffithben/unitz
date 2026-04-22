@@ -40,10 +40,6 @@ class Color extends AbstractUnitz
         }
     }
 
-    /**
-     * @param float $srm
-     * @return $this
-     */
     public function setSrm(float $srm): self
     {
         $this->srm = $srm;
@@ -53,19 +49,11 @@ class Color extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getSrm(?int $round = null): float
     {
         return $round ? round($this->srm, $round) : $this->srm;
     }
 
-    /**
-     * @param float $ebc
-     * @return $this
-     */
     public function setEbc(float $ebc): self
     {
         $this->ebc = $ebc;
@@ -75,19 +63,11 @@ class Color extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getEbc(?int $round = null): float
     {
         return $round ? round($this->ebc, $round) : $this->ebc;
     }
 
-    /**
-     * @param float $lovibond
-     * @return $this
-     */
     public function setLovibond(float $lovibond): self
     {
         $this->lovibond = $lovibond;
@@ -97,46 +77,26 @@ class Color extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getLovibond(?int $round = null): float
     {
         return $round ? round($this->lovibond, $round) : $this->lovibond;
     }
 
-    /**
-     * @param float $srm
-     * @return float
-     */
     public static function convertSrmToEbc(float $srm): float
     {
         return $srm * 1.97;
     }
 
-    /**
-     * @param float $ebc
-     * @return float
-     */
     public static function convertEbcToSrm(float $ebc): float
     {
         return $ebc / 1.97;
     }
 
-    /**
-     * @param float $srm
-     * @return float
-     */
     public static function convertSrmToLovibond(float $srm): float
     {
         return ($srm + 0.76) / 1.3546;
     }
 
-    /**
-     * @param float $lovibond
-     * @return float
-     */
     public static function convertLovibondToSrm(float $lovibond): float
     {
         return 1.3546 * $lovibond - 0.76;

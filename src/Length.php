@@ -72,10 +72,6 @@ class Length extends AbstractUnitz
         }
     }
 
-    /**
-     * @param float $inch
-     * @return $this
-     */
     public function setInch(float $inch): self
     {
         $this->inch = $inch;
@@ -90,19 +86,11 @@ class Length extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getInch(?int $round = null): float
     {
         return $round ? round($this->inch, $round) : $this->inch;
     }
 
-    /**
-     * @param float $foot
-     * @return $this
-     */
     public function setFoot(float $foot): self
     {
         $this->foot = $foot;
@@ -117,19 +105,11 @@ class Length extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getFoot(?int $round = null): float
     {
         return $round ? round($this->foot, $round) : $this->foot;
     }
 
-    /**
-     * @param float $yard
-     * @return $this
-     */
     public function setYard(float $yard): self
     {
         $this->yard = $yard;
@@ -144,19 +124,11 @@ class Length extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getYard(?int $round = null): float
     {
         return $round ? round($this->yard, $round) : $this->yard;
     }
 
-    /**
-     * @param float $mile
-     * @return $this
-     */
     public function setMile(float $mile): self
     {
         $this->mile = $mile;
@@ -171,19 +143,11 @@ class Length extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getMile(?int $round = null): float
     {
         return $round ? round($this->mile, $round) : $this->mile;
     }
 
-    /**
-     * @param float $millimeter
-     * @return $this
-     */
     public function setMillimeter(float $millimeter): self
     {
         $this->millimeter = $millimeter;
@@ -198,19 +162,11 @@ class Length extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getMillimeter(?int $round = null): float
     {
         return $round ? round($this->millimeter, $round) : $this->millimeter;
     }
 
-    /**
-     * @param float $centimeter
-     * @return $this
-     */
     public function setCentimeter(float $centimeter): self
     {
         $this->centimeter = $centimeter;
@@ -225,19 +181,11 @@ class Length extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getCentimeter(?int $round = null): float
     {
         return $round ? round($this->centimeter, $round) : $this->centimeter;
     }
 
-    /**
-     * @param float $meter
-     * @return $this
-     */
     public function setMeter(float $meter): self
     {
         $this->meter = $meter;
@@ -252,19 +200,11 @@ class Length extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getMeter(?int $round = null): float
     {
         return $round ? round($this->meter, $round) : $this->meter;
     }
 
-    /**
-     * @param float $kilometer
-     * @return $this
-     */
     public function setKilometer(float $kilometer): self
     {
         $this->kilometer = $kilometer;
@@ -279,136 +219,76 @@ class Length extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param int|null $round
-     * @return float
-     */
     public function getKilometer(?int $round = null): float
     {
         return $round ? round($this->kilometer, $round) : $this->kilometer;
     }
 
-    /**
-     * @param float $inch
-     * @return float
-     */
     public static function convertInchToFoot(float $inch): float
     {
         return $inch / 12;
     }
 
-    /**
-     * @param float $foot
-     * @return float
-     */
     public static function convertFootToInch(float $foot): float
     {
         return $foot * 12;
     }
 
-    /**
-     * @param float $foot
-     * @return float
-     */
     public static function convertFootToYard(float $foot): float
     {
         return $foot / 3;
     }
 
-    /**
-     * @param float $yard
-     * @return float
-     */
     public static function convertYardToFoot(float $yard): float
     {
         return $yard * 3;
     }
 
-    /**
-     * @param float $yard
-     * @return float
-     */
     public static function convertYardToMile(float $yard): float
     {
         return $yard / 1760;
     }
 
-    /**
-     * @param float $mile
-     * @return float
-     */
     public static function convertMileToYard(float $mile): float
     {
         return $mile * 1760;
     }
 
-    /**
-     * @param float $millimeter
-     * @return float
-     */
     public static function convertMillimeterToInch(float $millimeter): float
     {
         return $millimeter / 25.4;
     }
 
-    /**
-     * @param float $inch
-     * @return float
-     */
     public static function convertInchToMillimeter(float $inch): float
     {
         return $inch * 25.4;
     }
 
-    /**
-     * @param float $millimeter
-     * @return float
-     */
     public static function convertMillimeterToCentimeter(float $millimeter): float
     {
         return $millimeter / 10;
     }
 
-    /**
-     * @param float $centimeter
-     * @return float
-     */
     public static function convertCentimeterToMillimeter(float $centimeter): float
     {
         return $centimeter * 10;
     }
 
-    /**
-     * @param float $centimeter
-     * @return float
-     */
     public static function convertCentimeterToMeter(float $centimeter): float
     {
         return $centimeter / 100;
     }
 
-    /**
-     * @param float $meter
-     * @return float
-     */
     public static function convertMeterToCentimeter(float $meter): float
     {
         return $meter * 100;
     }
 
-    /**
-     * @param float $meter
-     * @return float
-     */
     public static function convertMeterToKilometer(float $meter): float
     {
         return $meter / 1000;
     }
 
-    /**
-     * @param float $kilometer
-     * @return float
-     */
     public static function convertKilometerToMeter(float $kilometer): float
     {
         return $kilometer * 1000;

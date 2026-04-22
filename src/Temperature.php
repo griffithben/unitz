@@ -34,10 +34,6 @@ class Temperature extends AbstractUnitz
         }
     }
 
-    /**
-     * @param float $fahrenheit
-     * @return $this
-     */
     public function setFahrenheit(float $fahrenheit): self
     {
         $this->fahrenheit = $fahrenheit;
@@ -46,28 +42,16 @@ class Temperature extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param ?int $round
-     * @return float
-     */
     public function getFahrenheit(?int $round = null): float
     {
         return $round ? round($this->fahrenheit, $round) : $this->fahrenheit;
     }
 
-    /**
-     * @param ?int $round
-     * @return float
-     */
     public function getCelsius(?int $round = 2): float
     {
         return $round ? round($this->celsius, $round) : $this->celsius;
     }
 
-    /**
-     * @param float $celsius
-     * @return $this
-     */
     public function setCelsius(float $celsius): self
     {
         $this->fahrenheit = self::convertCelsiusToFahrenheit($celsius);
@@ -76,19 +60,11 @@ class Temperature extends AbstractUnitz
         return $this;
     }
 
-    /**
-     * @param float $fahrenheit
-     * @return float
-     */
     public static function convertFahrenheitToCelsius(float $fahrenheit): float
     {
         return ($fahrenheit - 32) * 5 / 9;
     }
 
-    /**
-     * @param float $celsius
-     * @return float
-     */
     public static function convertCelsiusToFahrenheit(float $celsius): float
     {
         return ($celsius * 9 / 5) + 32;

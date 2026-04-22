@@ -8,15 +8,6 @@ use Unitz\Volume;
 
 class Spirit
 {
-    /**
-     * The amount of water you need to add to a distillate to dilute it down to a desired distillate.
-     *
-     * @param \Unitz\Distillate $current
-     * @param \Unitz\Distillate $desired
-     * @param \Unitz\Volume $distillateVolume
-     * @return \Unitz\Volume
-     * @throws \RuntimeException
-     */
     public static function diluteDownToDesiredProof(
         Distillate $current,
         Distillate $desired,
@@ -31,17 +22,6 @@ class Spirit
         );
     }
 
-    /**
-     * Determines the Volume of distillate you will get with a specific wash abv and still efficiency.
-     *
-     * Source - https://www.hillbillystills.com/distilling-calculator
-     *
-     * @param \Unitz\Volume $volume
-     * @param \Unitz\Distillate $wash
-     * @param float $stillEfficiencyPercent
-     * @return \Unitz\Volume
-     * @throws \InvalidArgumentException
-     */
     public static function distilledAlcoholVolume(
         Volume $volume,
         Distillate $wash,
@@ -56,13 +36,6 @@ class Spirit
         );
     }
 
-    /**
-     * @param \Unitz\Volume $volume
-     * @param \Unitz\Distillate $wash
-     * @param float $stillEfficiencyPercent
-     * @return \Unitz\Volume
-     * @throws \InvalidArgumentException
-     */
     public static function distilledRemainingWaterVolume(
         Volume $volume,
         Distillate $wash,
