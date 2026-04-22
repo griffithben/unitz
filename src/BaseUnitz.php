@@ -14,6 +14,8 @@ class BaseUnitz
         'Time' => 'Minute',
         'Distillate' => 'Proof',
         'Length' => 'Foot',
+        'Energy' => 'Joule',
+        'Angle' => 'Degree',
     ];
 
     private array $preferences;
