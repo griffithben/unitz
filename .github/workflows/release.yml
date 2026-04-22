@@ -60,9 +60,9 @@ jobs:
         if: steps.pr.outputs.bump != 'none'
         run: |
           git fetch --tags
-          LATEST=$(git tag -l 'v*' --sort=-version:refname | head -n1)
+          LATEST=$(git tag -l '[0-9]*' --sort=-version:refname | head -n1)
           if [ -z "$LATEST" ]; then
-            LATEST="v0.0.0"
+            LATEST="0.0.0"
           fi
           echo "Latest tag: $LATEST"
           echo "tag=$LATEST" >> $GITHUB_OUTPUT
@@ -73,7 +73,6 @@ jobs:
         run: |
           BUMP="${{ steps.pr.outputs.bump }}"
           VERSION="${{ steps.latest_tag.outputs.tag }}"
-          VERSION="${VERSION#v}"
 
           MAJOR=$(echo $VERSION | cut -d. -f1)
           MINOR=$(echo $VERSION | cut -d. -f2)
@@ -87,7 +86,7 @@ jobs:
             PATCH=$((PATCH + 1))
           fi
 
-          NEW="v${MAJOR}.${MINOR}.${PATCH}"
+          NEW="${MAJOR}.${MINOR}.${PATCH}"
           echo "New version: $NEW"
           echo "tag=$NEW" >> $GITHUB_OUTPUT
 
@@ -109,7 +108,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               tag_name: tag,
-              name: tag,
+              name: `Unitz ${tag}`,
               generate_release_notes: true
             });
 

@@ -148,6 +148,37 @@ final class UnitzService extends BaseUnitz
     }
 
     /**
+     * @param float|null $bit
+     * @param float|null $byte
+     * @param float|null $kilobyte
+     * @param float|null $megabyte
+     * @param float|null $gigabyte
+     * @param float|null $terabyte
+     * @param float|null $userValue
+     * @return \Unitz\DigitalStorage
+     */
+    public function makeDigitalStorage(
+        ?float $bit = null,
+        ?float $byte = null,
+        ?float $kilobyte = null,
+        ?float $megabyte = null,
+        ?float $gigabyte = null,
+        ?float $terabyte = null,
+        ?float $userValue = null
+    ): DigitalStorage {
+        return new DigitalStorage(
+            $bit,
+            $byte,
+            $kilobyte,
+            $megabyte,
+            $gigabyte,
+            $terabyte,
+            $userValue,
+            $this->getPreferences()
+        );
+    }
+
+    /**
      * @param float|null $degree
      * @param float|null $radian
      * @param float|null $gradian
