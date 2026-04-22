@@ -16,6 +16,7 @@ class BaseUnitz
         'Length' => 'Foot',
         'Energy' => 'Joule',
         'Angle' => 'Degree',
+        'DigitalStorage' => 'Megabyte',
     ];
 
     private array $preferences;
